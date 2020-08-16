@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'messages/index'
-  root "messages#index"#http://topページを表示させる
+  root "rooms#index"#http://topページを表示させる
   resources :users, only: [:edit, :update]
   resources :rooms, only: [:new, :create]
 
